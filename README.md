@@ -1,2 +1,1 @@
-# ReactTraining
-React training
+React training 'weather' app

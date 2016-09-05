@@ -7,7 +7,14 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-
+      Main: 'app/components/Main.jsx',
+      Nav: 'app/components/Nav.jsx',
+      Weather: 'app/components/Weather.jsx',
+      WeatherInput: 'app/components/WeatherInput',
+      WeatherOutput: 'app/components/WeatherOutput',
+      openWeatherMap: 'app/api/openWeatherMap.jsx',
+      About: 'app/components/About.jsx',
+      Examples: 'app/components/Examples.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -22,5 +29,6 @@ module.exports = {
         exclude: /(node_modules|bower_components)/
       }
     ]
-  }
+  },
+  devtool: 'inline-source-map'
 };
