@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './app/app.jsx',
+  entry: './public/app.jsx',
   output: {
       path: __dirname,
       filename: './public/bundle.js'
@@ -7,7 +7,9 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-
+      GreeterContainer: 'public/components/GreeterContainer.jsx',
+      GreeterOutput: 'public/components/GreeterOutput.jsx',
+      GreeterInput: 'public/components/GreeterInput.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -16,7 +18,7 @@ module.exports = {
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015', 'stage-0']
+          presets: ['react', 'es2015']
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
