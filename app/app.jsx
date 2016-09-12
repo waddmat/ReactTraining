@@ -6,6 +6,8 @@ var Weather = require('Weather');
 var About = require('About');
 var Examples = require('Examples');
 
+require('style!css!app/css/webv.css')
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
