@@ -6,7 +6,7 @@ var Weather = require('Weather');
 var About = require('About');
 var Examples = require('Examples');
 
-require('style!css!app/styles/app.css')
+require('style!css!applicationStyles')
 
 ReactDOM.render(
   <Router history={hashHistory}>

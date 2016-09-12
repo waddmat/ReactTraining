@@ -2,7 +2,7 @@ var React = require('react');
 
 var About = (props) => {
   return (
-    <h3>About Comp</h3>
+    <h1 className="page-title">About Comp</h1>
   );
 };
 
