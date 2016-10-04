@@ -14,16 +14,16 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import App from '../App';
-import Layout from './Layout';
+import System from './System';
 
-describe('Layout', () => {
+describe('System', () => {
 
   it('renders children correctly', () => {
     const wrapper = shallow(
       <App context={{ insertCss: () => {} }}>
-        <Layout>
+        <System>
           <div className="child" />
-        </Layout>
+        </System>
       </App>
     );
 

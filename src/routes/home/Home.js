@@ -9,12 +9,12 @@
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import Layout from '../../components/Layout';
+import System from '../../components/System';
 import s from './Home.css';
 
 function Home({ news }) {
   return (
-    <Layout>
+    <System>
       <div className={s.root}>
         <div className={s.container}>
           <h1 className={s.title}>React.js News</h1>
@@ -31,7 +31,7 @@ function Home({ news }) {
           </ul>
         </div>
       </div>
-    </Layout>
+    </System>
   );
 }
 

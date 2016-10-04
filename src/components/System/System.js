@@ -9,24 +9,25 @@
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Layout.css';
+import s from './System.css';
+import Navigation from '../Navigation';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
 
-function Layout({ children }) {
+function System({ children }) {
   return (
     <div>
+      <Navigation />
       <Header />
       {React.Children.only(children)}
-      <Feedback />
       <Footer />
     </div>
   );
 }
 
-Layout.propTypes = {
+System.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
-export default withStyles(s)(Layout);
+export default withStyles(s)(System);
