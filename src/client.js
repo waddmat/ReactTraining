@@ -16,13 +16,16 @@ import queryString from 'query-string';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { createPath } from 'history/PathUtils';
 import App from './components/App';
+import configureStore from './store/configureStore';
+
+// Navigation manager, e.g. history.push('/home')
+// https://github.com/mjackson/history
+const history = createBrowserHistory();
 
 // Global (context) variables that can be easily accessed from any React component
 // https://facebook.github.io/react/docs/context.html
 const context = {
-  // Navigation manager, e.g. history.push('/home')
-  // https://github.com/mjackson/history
-  history: createBrowserHistory(),
+  history,
   // Enables critical path CSS rendering
   // https://github.com/kriasoft/isomorphic-style-loader
   insertCss: (...styles) => {
@@ -30,6 +33,9 @@ const context = {
     const removeCss = styles.map(x => x._insertCss());
     return () => { removeCss.forEach(f => f()); };
   },
+  // Initialize a new Redux store
+  // http://redux.js.org/docs/basics/UsageWithReact.html
+  store: configureStore(window.APP_STATE, { history }),
 };
 
 function updateTag(tagName, keyName, keyValue, attrName, attrValue) {
