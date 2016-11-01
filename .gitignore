@@ -1,6 +1,7 @@
 *~
 bundle.js
 bundle.min.js
+.DS_Store
 
 # Logs
 logs

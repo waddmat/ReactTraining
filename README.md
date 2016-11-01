@@ -1,2 +1,1 @@
-# ReactTraining
-React training
+Boilerplate React App
